@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# brapix
+
+The goal of brapix is to provide eXtra tools for convenient bulk download breeding data and also do quick summaries and quality checks.
+
+## Installation
+
+You can install brapix from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("CIP-RIU/brapi")
+devtools::install_github("c5sire/brapix")
+
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(brapi)
+library(brapix)
+library(magrittr)
+
+
+con <- ba_db()$germinate_test
+
+loc <- ba_locations(con, pageSize = 10000)
+
+ba_describe(loc)
+
+gmp <- ba_genomemaps(con = con)
+
+gmp
+
+ba_genomemaps_details(con, mapDbId = "1") %>% ba_chart()
+
+```
