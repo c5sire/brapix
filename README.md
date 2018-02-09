@@ -12,7 +12,7 @@ You can install brapix from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("CIP-RIU/brapi")
+
 devtools::install_github("c5sire/brapix")
 ```
 

@@ -6,6 +6,7 @@ Description: Additional tools like bulk-downloading and quality control tools to
   assess data from breeding databases accessible via the BrAPI protocol.
 Depends: R (>= 3.4.3)
 Imports: stringr, maps, brapi, magrittr
+Remotes: CIP-RIU/brapi
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
